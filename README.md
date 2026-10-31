@@ -1,4 +1,5 @@
 # CampusLoop
+<<<<<<< HEAD
 
 **Pass It On. Save More. Learn Better.**
 
@@ -183,3 +184,6 @@ Mutating endpoints require `X-CSRF-Token` from `/csrf`. Password reset issuance/
 - Terms and Privacy Policy content/pages are not published; provide approved policy documents and links before accepting real registrations.
 
 Do not process real users, personal documents, payments, bookings, or uploaded files with this prototype until the missing workflows are implemented, tested, and reviewed.
+=======
+CampusLoop is a student-first marketplace to buy, sell, and rent electronics, college books, study materials, home appliances, and everyday essentials. Built to make products more affordable through reuse, resale, and rentals.
+>>>>>>> origin/main
