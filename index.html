@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ed">
+    <meta name="description" content="Buy, sell, and rent student essentials with CampusLoop. Discover useful second-hand finds and rentals.">
+    <title>CampusLoop — Find your next good thing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <span class="announcement__spark" aria-hidden="true">✳</span>
+      <span>Good things deserve another go.</span>
+      <span class="announcement__divider" aria-hidden="true">|</span>
+      <a href="#discover">Discover CampusLoop <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#discover" aria-label="CampusLoop home">
+        <span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand__name">Campus<span>Loop</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a class="nav-link nav-link--active" href="#discover">Discover</a>
+        <a class="nav-link" href="#categories">Categories</a>
+        <a class="nav-link" href="#how-it-works">How it works</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="location-control" type="button" aria-haspopup="dialog" aria-controls="location-dialog">
+          <span class="location-control__pin" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M16 8.3c0 4.5-6 9.2-6 9.2S4 12.8 4 8.3a6 6 0 1 1 12 0Z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          </span>
+          <span class="location-control__copy">
+            <span class="location-control__label">Shopping near</span>
+            <span class="location-control__value" id="header-location">Pune, India</span>
+          </span>
+          <span class="location-control__chevron" aria-hidden="true">⌄</span>
+        </button>
+        <div class="notification-control">
+          <button class="notification-button" id="notification-button" type="button" aria-label="Open notifications" aria-expanded="false" aria-controls="notification-menu">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-2.5 7-2.5 9h17C20.5 16 18 16 18 9ZM10 21h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="notification-menu" id="notification-menu" aria-label="Notifications" hidden>
+            <p class="notification-menu__title">Notifications</p>
+            <p class="notification-menu__empty">You're all caught up. Account notifications aren't available yet.</p>
+          </div>
+        </div>
+        <div class="profile-control">
+          <button class="profile-button" id="profile-button" type="button" aria-label="Open profile options" aria-expanded="false" aria-controls="profile-menu">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 20c.5-3.5 2.8-5.3 6.5-5.3s6 1.8 6.5 5.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="profile-menu" id="profile-menu" aria-label="Profile options" hidden>
+            <p class="profile-menu__eyebrow">Your CampusLoop</p>
+            <a href="/login?mode=buyer">Sign in <span aria-hidden="true">↗</span></a>
+            <a href="/register?mode=buyer">Create an account <span aria-hidden="true">＋</span></a>
+          </div>
+        </div>
+        <button class="icon-button wishlist-header" type="button" aria-label="View sample wishlist" data-scroll-to="featured">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.4 8.7c0 5-8.4 10-8.4 10s-8.4-5-8.4-10A4.6 4.6 0 0 1 12 6.1a4.6 4.6 0 0 1 8.4 2.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          <span class="wishlist-count" id="wishlist-count" aria-live="polite">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero--paths section-wrap" id="discover">
+        <div class="hero__intro">
+          <div class="eyebrow"><span class="eyebrow__dot"></span> The student-first marketplace</div>
+          <h1>Your Campus.<br><span>Your Marketplace.</span></h1>
+          <p>Buy, sell, and rent everything from college books and electronics to everyday essentials—all in one place. <strong>Pass It On. Save More. Learn Better.</strong></p>
+        </div>
+        <div class="mode-grid" aria-label="Choose how to use CampusLoop">
+          <article class="mode-card mode-card--buyer">
+            <div class="mode-card__top"><span class="mode-card__eyebrow">01 / BUYER</span><span class="mode-card__symbol" aria-hidden="true">↗</span></div>
+            <div class="mode-card__body">
+              <div class="mode-card__copy">
+                <h2>I'm a Buyer</h2>
+                <p>Explore books, electronics, and everyday essentials on the database-backed buyer dashboard.</p>
+                <a class="button button--lime" href="/login?mode=buyer" data-buyer-entry><span data-buyer-label>Explore Marketplace</span> <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="mode-card__art mode-card__art--buyer" aria-hidden="true"><span class="mode-art__orbit"></span><span class="mode-art__book mode-art__book--one">GOOD<br>FINDS</span><span class="mode-art__book mode-art__book--two">CAMPUS<br>ESSENTIALS</span><span class="mode-art__spark">✳</span></div>
+            </div>
+            <p class="mode-card__foot">New to CampusLoop? <a href="/register?mode=buyer">Create an account</a></p>
+          </article>
+          <article class="mode-card mode-card--seller">
+            <div class="mode-card__top"><span class="mode-card__eyebrow">02 / SELLER</span><span class="mode-card__symbol" aria-hidden="true">↗</span></div>
+            <div class="mode-card__body">
+              <div class="mode-card__copy">
+                <h2>I'm a Seller</h2>
+                <p>List useful products and offer eligible items for sale or rent to other students.</p>
+                <a class="button button--lime" href="/login?mode=seller" data-seller-entry><span data-seller-label>Start Selling</span> <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="mode-card__art mode-card__art--seller" aria-hidden="true"><span class="mode-art__orbit"></span><span class="mode-art__listing"><i></i><b></b><small></small></span><span class="mode-art__package"></span><span class="mode-art__spark">✳</span></div>
+            </div>
+            <p class="mode-card__foot">One account can use both modes. Create listings, upload images, and track listing status from your seller dashboard.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="search-panel section-wrap" aria-label="Search marketplace demo listings">
+        <form class="search-bar" id="search-form" role="search">
+          <label class="search-bar__field">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <span class="visually-hidden">Search items</span>
+            <input id="search-input" type="search" placeholder="Try engineering books, laptops or study lamps">
+          </label>
+          <span class="search-bar__divider" aria-hidden="true"></span>
+          <label class="search-bar__category">
+            <span class="visually-hidden">Filter by category</span>
+            <select id="category-select" aria-label="Filter by category">
+              <option value="All">All categories</option>
+              <option value="Books & study">College & School</option>
+              <option value="Tech & gadgets">Electronics & Gadgets</option>
+              <option value="Room & living">Home Accessories & Appliances</option>
+              <option value="Other Products & Rentals">Other Products & Rentals</option>
+            </select>
+          </label>
+          <span class="search-bar__divider search-bar__divider--location" aria-hidden="true"></span>
+          <button class="search-bar__location" type="button" aria-haspopup="dialog" aria-controls="location-dialog">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 8.3c0 4.5-6 9.2-6 9.2S4 12.8 4 8.3a6 6 0 1 1 12 0Z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span id="search-location">Pune, India</span>
+            <span aria-hidden="true">⌄</span>
+          </button>
+          <button class="button button--dark search-bar__submit" type="submit">Search <span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="search-panel__meta"><span><i aria-hidden="true"></i> <span id="region-caption">Pune, India</span> <b>· demo listings only</b></span><button type="button" class="text-button" data-open-location>Change location</button></div>
+      </section>
+
+      <section class="category-section section-wrap" id="categories">
+        <div class="section-heading">
+          <div><p class="eyebrow">Good finds, useful things</p><h2>Find your corner of <span>the loop.</span></h2></div>
+          <a class="text-link" href="/login?mode=buyer">Browse current listings <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="category-grid">
+          <a class="category-card category-card--tech" href="#featured" data-filter="Tech & gadgets">
+            <span class="category-card__art" aria-hidden="true"><span class="mini-device"><i></i></span><span class="mini-earbud">⌁</span></span>
+            <span class="category-card__title">Electronics & Gadgets</span><span class="category-card__sub">Everyday tech, ready to go.</span><span class="category-card__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-card category-card--living" href="#featured" data-filter="Room & living">
+            <span class="category-card__art" aria-hidden="true"><span class="mini-lamp"><i></i><b></b></span><span class="mini-plant"><i></i><i></i><b></b></span></span>
+            <span class="category-card__title">Home Accessories & Appliances</span><span class="category-card__sub">Make a room feel like yours.</span><span class="category-card__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-card category-card--books" href="#featured" data-filter="Books & study">
+            <span class="category-card__art" aria-hidden="true"><span class="mini-book mini-book--green"></span><span class="mini-book mini-book--orange"></span><span class="mini-book mini-book--blue"></span><i>✳</i></span>
+            <span class="category-card__title">College & School</span><span class="category-card__sub">Books and study essentials.</span><span class="category-card__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-card category-card--more" href="#featured" data-filter="Other Products & Rentals">
+            <span class="category-card__art" aria-hidden="true"><span class="more-orbit more-orbit--one">◌</span><span class="more-orbit more-orbit--two">✳</span><span class="more-orbit more-orbit--three">↗</span></span>
+            <span class="category-card__title">Other Products & Rentals</span><span class="category-card__sub">Borrow, rent, pass it on.</span><span class="category-card__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="featured-section" id="featured">
+        <div class="section-wrap">
+          <div class="section-heading section-heading--featured">
+            <div><p class="eyebrow">A few sample listings</p><h2>Useful things, <span>in good company.</span></h2></div>
+            <div class="featured-controls">
+              <div class="filter-pills" role="group" aria-label="Filter sample products">
+                <button class="filter-pill filter-pill--active" type="button" data-filter="All">All finds</button>
+                <button class="filter-pill" type="button" data-filter="Books & study">College & School</button>
+                <button class="filter-pill" type="button" data-filter="Rentals">Rentals</button>
+              </div>
+              <label class="sort-control">Sort by
+                <select id="sort-select" aria-label="Sort sample products">
+                  <option value="featured">Featured</option>
+                  <option value="price-low">Price: low to high</option>
+                  <option value="price-high">Price: high to low</option>
+                  <option value="newest">Recently listed</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="results-message" id="results-message" aria-live="polite"></div>
+          <div class="product-grid" id="product-grid">
+            <article class="product-card" data-category="Books & study" data-mode="sale" data-price="320" data-age="1" data-search="engineering mathematics textbook semester 2 books study">
+              <div class="product-card__visual product-visual--math">
+                <span class="product-card__tag">Demo listing</span><button class="save-button" type="button" aria-label="Save demo listing: Engineering Mathematics" aria-pressed="false">♡</button>
+                <div class="book-cover book-cover--math"><i>ENGINEERING<br>MATHEMATICS</i><span>SEMESTER<br>02</span><b>vol. one</b></div><span class="visual-caption">01 / 04</span>
+              </div>
+              <div class="product-card__info"><div class="product-card__category">College & School <span>·</span> Textbook</div><h3>Engineering Mathematics — Vol. 1</h3><div class="product-card__seller"><span class="seller-avatar seller-avatar--coral">A</span><span>Sample seller <i>·</i> <b class="product-location">Pune</b></span></div><div class="product-card__bottom"><span class="product-price"><b class="item-price" data-amount="320">₹320</b><small> one-time · demo price</small></span><span class="condition-dot"><i></i> Good</span></div></div>
+            </article>
+            <article class="product-card" data-category="Tech & gadgets" data-mode="rent" data-price="80" data-age="2" data-search="scientific calculator casio rent exam tech gadgets">
+              <div class="product-card__visual product-visual--calculator">
+                <span class="product-card__tag product-card__tag--rent">Demo rental</span><button class="save-button" type="button" aria-label="Save demo listing: Scientific calculator" aria-pressed="false">♡</button>
+                <div class="calculator-art"><div class="calculator-art__screen">sin · cos · tan<br><strong>fx-991</strong></div><div class="calculator-art__keys"><i>7</i><i>8</i><i>9</i><i>÷</i><i>4</i><i>5</i><i>6</i><i>×</i><i>1</i><i>2</i><i>3</i><i>−</i></div></div><span class="visual-caption">01 / 03</span>
+              </div>
+              <div class="product-card__info"><div class="product-card__category">Electronics & Gadgets <span>·</span> Calculator</div><h3>Scientific calculator, exam ready</h3><div class="product-card__seller"><span class="seller-avatar seller-avatar--lime">R</span><span>Sample seller <i>·</i> <b class="product-location">Pune</b></span></div><div class="product-card__bottom"><span class="product-price"><b class="item-price" data-amount="80">₹80</b><small> / day · demo price</small></span><span class="condition-dot"><i></i> Like new</span></div></div>
+            </article>
+            <article class="product-card" data-category="Books & study" data-mode="sale" data-price="450" data-age="3" data-search="design for real world book notes study books">
+              <div class="product-card__visual product-visual--design">
+                <span class="product-card__tag">Demo listing</span><button class="save-button" type="button" aria-label="Save demo listing: Design for the Real World" aria-pressed="false">♡</button>
+                <div class="book-cover book-cover--design"><span>design<br>for the<br><b>real world</b></span><i>Victor Papanek</i></div><span class="visual-caption">01 / 02</span>
+              </div>
+              <div class="product-card__info"><div class="product-card__category">College & School <span>·</span> Design</div><h3>Design for the Real World</h3><div class="product-card__seller"><span class="seller-avatar seller-avatar--blue">M</span><span>Sample seller <i>·</i> <b class="product-location">Pune</b></span></div><div class="product-card__bottom"><span class="product-price"><b class="item-price" data-amount="450">₹450</b><small> one-time · demo price</small></span><span class="condition-dot"><i></i> Very good</span></div></div>
+            </article>
+            <article class="product-card" data-category="Room & living" data-mode="rent" data-price="120" data-age="4" data-search="desk lamp study room rent living">
+              <div class="product-card__visual product-visual--lamp">
+                <span class="product-card__tag product-card__tag--rent">Demo rental</span><button class="save-button" type="button" aria-label="Save demo listing: Adjustable desk lamp" aria-pressed="false">♡</button>
+                <div class="lamp-art"><span class="lamp-art__shade"></span><span class="lamp-art__arm"></span><span class="lamp-art__stem"></span><span class="lamp-art__base"></span><span class="lamp-art__glow"></span></div><span class="visual-caption">01 / 05</span>
+              </div>
+              <div class="product-card__info"><div class="product-card__category">Home Accessories <span>·</span> Study setup</div><h3>Adjustable desk lamp in forest green</h3><div class="product-card__seller"><span class="seller-avatar seller-avatar--purple">K</span><span>Sample seller <i>·</i> <b class="product-location">Pune</b></span></div><div class="product-card__bottom"><span class="product-price"><b class="item-price" data-amount="120">₹120</b><small> / day · demo price</small></span><span class="condition-dot"><i></i> Good</span></div></div>
+            </article>
+          </div>
+          <div class="empty-state" id="empty-state" hidden><span>✳</span><h3>No sample finds in this category.</h3><p>These are illustrative cards, not the live CampusLoop catalogue.</p><button class="button button--dark button--small" type="button" id="clear-filters">Show all samples</button></div>
+          <p class="demo-note">Sample content only · No live inventory, seller verification, checkout, or payment is connected.</p>
+        </div>
+      </section>
+
+      <section class="how-section section-wrap" id="how-it-works">
+        <div class="section-heading">
+          <div><p class="eyebrow">A simpler way to share</p><h2>Find it. Use it. <span>Keep it moving.</span></h2></div>
+          <p class="section-heading__aside">CampusLoop is designed around the things students need and the things already in reach.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-card__number">01</span><span class="step-card__icon step-card__icon--search" aria-hidden="true">⌕</span><h3>Discover what you need</h3><p>Explore books, gadgets, home essentials, and useful local finds.</p></article>
+          <article class="step-card"><span class="step-card__number">02</span><span class="step-card__icon step-card__icon--chat" aria-hidden="true">↗</span><h3>Review a listing</h3><p>Check its details and availability. Checkout, rental booking, and messaging are not active yet.</p></article>
+          <article class="step-card"><span class="step-card__number">03</span><span class="step-card__icon step-card__icon--cycle" aria-hidden="true">⟲</span><h3>Save money, give it another life</h3><p>Reuse useful things and share them with the next student.</p></article>
+        </div>
+      </section>
+
+      <section class="trust-section section-wrap" id="trust">
+        <div class="trust-section__heading"><p class="eyebrow">Built with care, not big claims</p><h2>Good marketplace habits<br><span>start with clarity.</span></h2><p>Here are the principles guiding CampusLoop. Platform verification and payment-protection services are not currently operational.</p></div>
+        <div class="trust-grid">
+          <article class="trust-card"><span class="trust-card__icon trust-card__icon--sage" aria-hidden="true">◎</span><h3>Seller details matter</h3><p>Review listing and seller details carefully. A verified-seller service is not currently active.</p><span class="trust-card__status">Review listings thoughtfully</span></article>
+          <article class="trust-card"><span class="trust-card__icon trust-card__icon--peach" aria-hidden="true">₹</span><h3>Clear prices, always</h3><p>Know what is a sale price, rental fee, or refundable deposit before agreeing to anything.</p><span class="trust-card__status">Keep every cost distinct</span></article>
+          <article class="trust-card"><span class="trust-card__icon trust-card__icon--blue" aria-hidden="true">↔</span><h3>Choose a safe hand-off</h3><p>Arrange exchanges thoughtfully. CampusLoop payment protection and transaction handling are not active.</p><span class="trust-card__status">No payments in this demo</span></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="site-footer__main section-wrap">
+        <div class="footer-brand"><a class="brand brand--footer" href="#discover"><span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="brand__name">Campus<span>Loop</span></span></a><p>Student essentials, shared<br>for another go.</p><span class="footer-region"><i></i> Made for the campus community.</span></div>
+        <div class="footer-column"><h3>Explore</h3><a href="#featured">Marketplace samples</a><a href="#categories" data-filter-link="Tech & gadgets">Electronics & Gadgets</a><a href="#categories" data-filter-link="Room & living">Home & Appliances</a><a href="#categories" data-filter-link="Books & study">College & School</a><a href="#categories" data-filter-link="Other Products & Rentals">Other & Rentals</a></div>
+        <div class="footer-column"><h3>CampusLoop</h3><a href="#discover">About CampusLoop</a><a href="#contact">Contact</a><a href="#how-it-works">Help & how it works</a><a href="#trust">Trust & transparency</a></div>
+        <div class="footer-column"><h3>Policies</h3><a href="#trust" data-toast="CampusLoop terms are not published yet.">Terms</a><a href="#trust" data-toast="CampusLoop privacy policy is not published yet.">Privacy</a><a href="#trust" data-toast="Safety and support features are not active yet.">Safety & support</a></div>
+      </div>
+      <div class="site-footer__bottom section-wrap"><span>© 2026 CampusLoop <span class="footer-demo">· Frontend demo</span></span><div><a href="#discover">Back to top ↑</a><span>Keep it in the loop <b>↻</b></span></div></div>
+    </footer>
+
+    <dialog class="location-dialog" id="location-dialog" aria-labelledby="location-title">
+      <form method="dialog" class="location-dialog__top"><span class="location-dialog__icon" aria-hidden="true">⌖</span><button class="dialog-close" value="cancel" aria-label="Close location settings">×</button></form>
+      <p class="eyebrow">A closer kind of find</p>
+      <h2 id="location-title">Where should we<br><span>look for you?</span></h2>
+      <p class="location-dialog__description">Select a country and city to preview local prices. Conversion is illustrative; the sample listings are not live location-based inventory.</p>
+      <div class="location-detect"><span class="location-detect__icon" aria-hidden="true">✳</span><span><b id="detect-label">India is your starting point</b><small id="detect-description">Based on your browser region, or our India-first default.</small></span></div>
+      <label class="form-label" for="country-select">Country</label>
+      <select class="location-select" id="country-select">
+        <option value="IN">🇮🇳 &nbsp; India</option><option value="US">🇺🇸 &nbsp; United States</option><option value="GB">🇬🇧 &nbsp; United Kingdom</option><option value="AE">🇦🇪 &nbsp; United Arab Emirates</option><option value="SG">🇸🇬 &nbsp; Singapore</option>
+      </select>
+      <label class="form-label" for="city-input">City or area <span>(optional)</span></label>
+      <input class="location-select" id="city-input" type="text" list="city-suggestions" placeholder="e.g. Pune">
+      <datalist id="city-suggestions"></datalist>
+      <div class="location-dialog__actions"><button class="button button--dark" id="apply-location" type="button">Update preview location <span aria-hidden="true">↗</span></button><button class="location-dialog__reset" type="button" id="use-detected">Use detected region</button></div>
+      <p class="location-dialog__privacy">Region is suggested using your browser's language settings, not GPS.</p>
+    </dialog>
+
+    <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+  </body>
+</html>
